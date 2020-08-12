@@ -1,0 +1,33 @@
+{
+  "name": "api-restful",
+  "version": "1.0.0",
+  "description": "Estrutura básica para API RESTfull desenvolvida Node.js e Express",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phmatos07/api-restful.git"
+  },
+  "homepage": "https://github.com/phmatos07/api-restful#readme",
+  "author": "Phelipe Matos - PHMATOS07",
+  "license": "GPL-3.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "debug": "nodemon --inspect src/server.js",
+    "debug:brk": "node --inspect-brk src/server.js",
+    "lint": "./node_modules/.bin/eslint src"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  }
+}
