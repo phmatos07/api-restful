@@ -1,9 +1,9 @@
-const typeErrorsEnum = require('./../models/enum/type-errors.enum');
+const TypeErrorsEnum = require('./../models/enum/type-errors.enum');
 
-const clientErrorHandlerMiddleware = (err, req, res, next) => {
+const ClientErrorHandlerMiddleware = (err, req, res, next) => {
   try {
 
-    if (err.typeError === typeErrorsEnum.XML_HTTP_REQUEST) {
+    if (err.typeError === TypeErrorsEnum.XML_HTTP_REQUEST) {
       throw err;
     }
     next(err);
@@ -15,4 +15,4 @@ const clientErrorHandlerMiddleware = (err, req, res, next) => {
   }
 };
 
-module.exports = clientErrorHandlerMiddleware;
+module.exports = ClientErrorHandlerMiddleware;

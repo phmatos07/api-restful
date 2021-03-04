@@ -8,8 +8,8 @@ const app = express();
 const userRoutes = require('./app/user/routes');
 
 // MIDDLEWARES ERROR'S
-const errorHandlerMiddleware = require('./middlewares/error-handler.middleware');
-const clientErrorHandlerMiddleware = require('./middlewares/client-error-handler.middleware');
+const ClientErrorHandlerMiddleware = require('./middlewares/client-error-handler.middleware');
+const ErrorHandlerMiddleware = require('./middlewares/error-handler.middleware');
 
 // BODY-PARSER
 app.use(bodyParser.json());
@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use('/', userRoutes);
 
 // MIDDLEWARES ERROR'S
-app.use(clientErrorHandlerMiddleware);
-app.use(errorHandlerMiddleware);
+app.use(ClientErrorHandlerMiddleware);
+app.use(ErrorHandlerMiddleware);
 
 module.exports = app;
