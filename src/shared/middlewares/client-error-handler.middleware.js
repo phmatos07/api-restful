@@ -1,4 +1,4 @@
-const TypeErrorsEnum = require('./../models/enum/type-errors.enum');
+const TypeErrorsEnum = require('./../enum/type-errors.enum');
 
 const ClientErrorHandlerMiddleware = (err, req, res, next) => {
   try {
