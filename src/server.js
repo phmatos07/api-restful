@@ -10,7 +10,12 @@ try {
 
   // Liga e escuta as conexões no host e na porta especificados.
   app.listen(NormalizePortHelper(process.env.APP_PORT));
-  console.info(`SERVER OK - PORT: ${process.env.APP_PORT}`);
+
+  if (process.env.STATUS_CONNECTION_INFO) {
+    console.group('CONNECTED SERVER');
+    console.info(`PORT: ${process.env.APP_PORT}`);
+    console.groupEnd();
+  }
 
 } catch (error) {
   console.error(error);
