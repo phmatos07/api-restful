@@ -11,8 +11,8 @@
   "license": "GPL-3.0",
   "main": "src/app.js",
   "scripts": {
-    "test": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "start:watch": "nodemon src/server.js",
     "debug": "nodemon --inspect src/server.js",
     "debug:brk": "node --inspect-brk src/server.js",
     "lint": "./node_modules/.bin/eslint src"
