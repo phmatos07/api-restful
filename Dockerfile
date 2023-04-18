@@ -1,11 +1,13 @@
-FROM node:alpine
+FROM node:14
 
 WORKDIR /app
+
+ARG PORT_BUILD=3000
+ENV PORT_CONTAINER=$PORT_BUILD
+EXPOSE $PORT_BUILD
 
 COPY . .
 
 RUN npm install
 
-CMD ["npm", "start"]
-
-EXPOSE 3000
+ENTRYPOINT ["npm", "start"]
